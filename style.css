@@ -12,10 +12,10 @@
 body {
   width: 100vw;
   height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container {
-  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -23,7 +23,7 @@ body {
 
 .side-banner {
   height: 100%;
-  width: 33%;
+  flex: 1;
   background-image: url(images/leafy-background.jpg);
   background-size: cover;
 }
@@ -44,4 +44,106 @@ body {
 
 .logo img {
   max-width: 80px;
+}
+
+.content {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: palegrey;
+}
+
+.content > * {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.content p#top-paragraph {
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.form-div {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #1e1e1e;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin: 15px 0;
+}
+
+.form-cell label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+
+.form-cell input,
+button#signup-submit {
+  appearance: none;
+}
+
+.form-cell input {
+  display: block;
+  border-radius: 4px;
+  height: 24px;
+  width: 180px;
+  border: 1px solid #E5E7EB;
+  padding: 5px;
+  font-size: 0.75rem;
+}
+
+.form-cell input:focus {
+  outline: 1px solid blue;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-cell input.error {
+  outline: 1px solid red;
+}
+
+.form-cell input:invalid:required:not(:blank) {
+  outline: 1px solid red;
+}
+
+button#signup-submit {
+  border: none;
+  padding: 15px 35px;
+  margin: 30px 0;
+  background-color: #596D48;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+button#signup-submit:hover {
+  cursor: pointer;
+  background-color: #25301c;
+}
+
+div#password-error-wrapper {
+  position: relative;
+}
+
+div#password-error-wrapper > p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.7rem;
+  color: red;
+}
+
+.content a {
+  text-decoration: none;
+  color: #596D48;
+}
+
+.content a:hover {
+  color: #25301c;
 }

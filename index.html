@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SignUp Form</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -14,7 +15,58 @@
         <span>odin</span>
       </div>
     </div>
-    <div class="content"></div>
+    <div class="content">
+      <p id="top-paragraph">
+      This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>
+      Sign up <em>now</em> to get started.<br>
+      <br>
+      You <em>know</em> you want to.
+      </p>
+
+      <div class="form-div">
+        <p id="form-header"><strong>Let's do this!</strong></p>
+        <form id="signup-form" action="" method="post">
+          <div class="form-row">
+            <div class="form-cell">
+              <label for="first-name">first name</label>
+              <input required type="text" name="first-name" id="first-name">
+            </div>
+            <div class="form-cell">
+              <label for="last-name">last name</label>
+              <input required type="text" name="last-name" id="last-name">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-cell">
+              <label for="email">email</label>
+              <input required type="email" name="email" id="email">
+            </div>
+            <div class="form-cell">
+              <label for="tel">phone number</label>
+              <input required type="tel" name="tel" id="tel">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-cell">
+              <label for="password">password</label>
+              <input required type="password" name="password" id="password">
+              <div id="password-error-wrapper">
+                <p></p>
+              </div>
+            </div>
+            <div class="form-cell">
+              <label for="password-confirm">confirm password</label>
+              <input required type="password" name="password-confirm" id="password-confirm">
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div style="width: 100%;">
+        <button id="signup-submit" form="signup-form">Create account</button>
+        <p>Already have an account? <a href=""><strong>Log in</strong></a></p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
