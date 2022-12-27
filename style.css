@@ -147,3 +147,16 @@ div#password-error-wrapper > p {
 .content a:hover {
   color: #25301c;
 }
+
+@media (min-width: 1200px) {
+  .form-div form {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
